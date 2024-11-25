@@ -1,0 +1,158 @@
+/* General Reset */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+/* Main App container to fill the entire viewport */
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure it stretches the full height */
+}
+
+/* Light Theme (default) */
+body {
+  background: linear-gradient(135deg, #f3f4f7, #e3e3e3);
+  color: #333;
+}
+
+.App.light {
+  color: black;
+  background: linear-gradient(135deg, #f3f4f7, #e3e3e3);
+}
+
+/* Dark Theme */
+body.dark {
+  background-color: #2f2f2f;
+  color: white;
+}
+
+.App.dark {
+  background-color: #333;
+  color: white;
+}
+
+/* Header Styling */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #282c34;
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+nav a {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: lightblue;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Content Section (fills available space) */
+section {
+  flex: 1; /* Fill remaining space between header and footer */
+  padding: 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+section p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  max-width: 800px;
+  text-align: center;
+}
+
+/* Projects List Styling */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  background: white;
+  margin: 1rem 0;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  width: 100%;
+  max-width: 600px;
+}
+
+ul li h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.5rem;
+  color: inherit; /* Ensure color is inherited based on the theme */
+}
+
+ul li p {
+  margin: 0;
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Footer Styling */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #282c34;
+  color: white;
+  font-size: 0.9rem;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Button Styling */
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  margin: 20px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+button:focus {
+  outline: none;
+}
+
+/* Styling for Project Titles in Dark Mode */
+.App.dark ul li {
+  background: #444; /* Darken background for project items in dark mode */
+}
+
+.App.dark ul li h3 {
+  color: white; /* Ensure the text is white in dark mode */
+}
+
+.App.dark ul li p {
+  color: #ddd; /* Lighten the project description in dark mode */
+}
